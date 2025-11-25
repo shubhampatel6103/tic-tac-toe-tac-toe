@@ -1,0 +1,185 @@
+"use strict";
+const button000 = document.getElementById('small-000');
+const button001 = document.getElementById('small-001');
+const button002 = document.getElementById('small-002');
+const button010 = document.getElementById('small-010');
+const button011 = document.getElementById('small-011');
+const button012 = document.getElementById('small-012');
+const button020 = document.getElementById('small-020');
+const button021 = document.getElementById('small-021');
+const button022 = document.getElementById('small-022');
+const button100 = document.getElementById('small-100');
+const button101 = document.getElementById('small-101');
+const button102 = document.getElementById('small-102');
+const button110 = document.getElementById('small-110');
+const button111 = document.getElementById('small-111');
+const button112 = document.getElementById('small-112');
+const button120 = document.getElementById('small-120');
+const button121 = document.getElementById('small-121');
+const button122 = document.getElementById('small-122');
+const button200 = document.getElementById('small-200');
+const button201 = document.getElementById('small-201');
+const button202 = document.getElementById('small-202');
+const button210 = document.getElementById('small-210');
+const button211 = document.getElementById('small-211');
+const button212 = document.getElementById('small-212');
+const button220 = document.getElementById('small-220');
+const button221 = document.getElementById('small-221');
+const button222 = document.getElementById('small-222');
+const button300 = document.getElementById('small-300');
+const button301 = document.getElementById('small-301');
+const button302 = document.getElementById('small-302');
+const button310 = document.getElementById('small-310');
+const button311 = document.getElementById('small-311');
+const button312 = document.getElementById('small-312');
+const button320 = document.getElementById('small-320');
+const button321 = document.getElementById('small-321');
+const button322 = document.getElementById('small-322');
+const button400 = document.getElementById('small-400');
+const button401 = document.getElementById('small-401');
+const button402 = document.getElementById('small-402');
+const button410 = document.getElementById('small-410');
+const button411 = document.getElementById('small-411');
+const button412 = document.getElementById('small-412');
+const button420 = document.getElementById('small-420');
+const button421 = document.getElementById('small-421');
+const button422 = document.getElementById('small-422');
+const button500 = document.getElementById('small-500');
+const button501 = document.getElementById('small-501');
+const button502 = document.getElementById('small-502');
+const button510 = document.getElementById('small-510');
+const button511 = document.getElementById('small-511');
+const button512 = document.getElementById('small-512');
+const button520 = document.getElementById('small-520');
+const button521 = document.getElementById('small-521');
+const button522 = document.getElementById('small-522');
+const button600 = document.getElementById('small-600');
+const button601 = document.getElementById('small-601');
+const button602 = document.getElementById('small-602');
+const button610 = document.getElementById('small-610');
+const button611 = document.getElementById('small-611');
+const button612 = document.getElementById('small-612');
+const button620 = document.getElementById('small-620');
+const button621 = document.getElementById('small-621');
+const button622 = document.getElementById('small-622');
+const button700 = document.getElementById('small-700');
+const button701 = document.getElementById('small-701');
+const button702 = document.getElementById('small-702');
+const button710 = document.getElementById('small-710');
+const button711 = document.getElementById('small-711');
+const button712 = document.getElementById('small-712');
+const button720 = document.getElementById('small-720');
+const button721 = document.getElementById('small-721');
+const button722 = document.getElementById('small-722');
+const button800 = document.getElementById('small-800');
+const button801 = document.getElementById('small-801');
+const button802 = document.getElementById('small-802');
+const button810 = document.getElementById('small-810');
+const button811 = document.getElementById('small-811');
+const button812 = document.getElementById('small-812');
+const button820 = document.getElementById('small-820');
+const button821 = document.getElementById('small-821');
+const button822 = document.getElementById('small-822');
+function printBoard() {
+    button000.textContent = grid[0].grid[0][0];
+    button001.textContent = grid[0].grid[0][1];
+    button002.textContent = grid[0].grid[0][2];
+    button010.textContent = grid[0].grid[1][0];
+    button011.textContent = grid[0].grid[1][1];
+    button012.textContent = grid[0].grid[1][2];
+    button020.textContent = grid[0].grid[2][0];
+    button021.textContent = grid[0].grid[2][1];
+    button022.textContent = grid[0].grid[2][2];
+    button100.textContent = grid[1].grid[0][0];
+    button101.textContent = grid[1].grid[0][1];
+    button102.textContent = grid[1].grid[0][2];
+    button110.textContent = grid[1].grid[1][0];
+    button111.textContent = grid[1].grid[1][1];
+    button112.textContent = grid[1].grid[1][2];
+    button120.textContent = grid[1].grid[2][0];
+    button121.textContent = grid[1].grid[2][1];
+    button122.textContent = grid[1].grid[2][2];
+    button200.textContent = grid[2].grid[0][0];
+    button201.textContent = grid[2].grid[0][1];
+    button202.textContent = grid[2].grid[0][2];
+    button210.textContent = grid[2].grid[1][0];
+    button211.textContent = grid[2].grid[1][1];
+    button212.textContent = grid[2].grid[1][2];
+    button220.textContent = grid[2].grid[2][0];
+    button221.textContent = grid[2].grid[2][1];
+    button222.textContent = grid[2].grid[2][2];
+    button300.textContent = grid[3].grid[0][0];
+    button301.textContent = grid[3].grid[0][1];
+    button302.textContent = grid[3].grid[0][2];
+    button310.textContent = grid[3].grid[1][0];
+    button311.textContent = grid[3].grid[1][1];
+    button312.textContent = grid[3].grid[1][2];
+    button320.textContent = grid[3].grid[2][0];
+    button321.textContent = grid[3].grid[2][1];
+    button322.textContent = grid[3].grid[2][2];
+    button400.textContent = grid[4].grid[0][0];
+    button401.textContent = grid[4].grid[0][1];
+    button402.textContent = grid[4].grid[0][2];
+    button410.textContent = grid[4].grid[1][0];
+    button411.textContent = grid[4].grid[1][1];
+    button412.textContent = grid[4].grid[1][2];
+    button420.textContent = grid[4].grid[2][0];
+    button421.textContent = grid[4].grid[2][1];
+    button422.textContent = grid[4].grid[2][2];
+    button500.textContent = grid[5].grid[0][0];
+    button501.textContent = grid[5].grid[0][1];
+    button502.textContent = grid[5].grid[0][2];
+    button510.textContent = grid[5].grid[1][0];
+    button511.textContent = grid[5].grid[1][1];
+    button512.textContent = grid[5].grid[1][2];
+    button520.textContent = grid[5].grid[2][0];
+    button521.textContent = grid[5].grid[2][1];
+    button522.textContent = grid[5].grid[2][2];
+    button600.textContent = grid[6].grid[0][0];
+    button601.textContent = grid[6].grid[0][1];
+    button602.textContent = grid[6].grid[0][2];
+    button610.textContent = grid[6].grid[1][0];
+    button611.textContent = grid[6].grid[1][1];
+    button612.textContent = grid[6].grid[1][2];
+    button620.textContent = grid[6].grid[2][0];
+    button621.textContent = grid[6].grid[2][1];
+    button622.textContent = grid[6].grid[2][2];
+    button700.textContent = grid[7].grid[0][0];
+    button701.textContent = grid[7].grid[0][1];
+    button702.textContent = grid[7].grid[0][2];
+    button710.textContent = grid[7].grid[1][0];
+    button711.textContent = grid[7].grid[1][1];
+    button712.textContent = grid[7].grid[1][2];
+    button720.textContent = grid[7].grid[2][0];
+    button721.textContent = grid[7].grid[2][1];
+    button722.textContent = grid[7].grid[2][2];
+    button800.textContent = grid[8].grid[0][0];
+    button801.textContent = grid[8].grid[0][1];
+    button802.textContent = grid[8].grid[0][2];
+    button810.textContent = grid[8].grid[1][0];
+    button811.textContent = grid[8].grid[1][1];
+    button812.textContent = grid[8].grid[1][2];
+    button820.textContent = grid[8].grid[2][0];
+    button821.textContent = grid[8].grid[2][1];
+    button822.textContent = grid[8].grid[2][2];
+}
+function highlightValidGrids(validGrids) {
+    for (let i = 0; i < 9; i++) {
+        if (validGrids.includes(i)) {
+            document.getElementById(`big-${i}`).style.backgroundColor = 'rgba(0, 255, 0, 0.5)';
+        }
+        else {
+            document.getElementById(`big-${i}`).style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        }
+    }
+}
+function colorWinner(cells) {
+    for (let i = 0; i < 9; i++) {
+        if (cells.includes(i)) {
+            document.getElementById(`big-${i}`).style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
+        }
+        else {
+            document.getElementById(`big-${i}`).style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        }
+    }
+}

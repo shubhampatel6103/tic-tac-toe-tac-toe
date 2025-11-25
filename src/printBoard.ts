@@ -1,0 +1,185 @@
+const button000 = document.getElementById('small-000') as HTMLElement;
+const button001 = document.getElementById('small-001') as HTMLElement;
+const button002 = document.getElementById('small-002') as HTMLElement;
+const button010 = document.getElementById('small-010') as HTMLElement;
+const button011 = document.getElementById('small-011') as HTMLElement;
+const button012 = document.getElementById('small-012') as HTMLElement;
+const button020 = document.getElementById('small-020') as HTMLElement;
+const button021 = document.getElementById('small-021') as HTMLElement;
+const button022 = document.getElementById('small-022') as HTMLElement;
+const button100 = document.getElementById('small-100') as HTMLElement;
+const button101 = document.getElementById('small-101') as HTMLElement;
+const button102 = document.getElementById('small-102') as HTMLElement;
+const button110 = document.getElementById('small-110') as HTMLElement;
+const button111 = document.getElementById('small-111') as HTMLElement;
+const button112 = document.getElementById('small-112') as HTMLElement;
+const button120 = document.getElementById('small-120') as HTMLElement;
+const button121 = document.getElementById('small-121') as HTMLElement;
+const button122 = document.getElementById('small-122') as HTMLElement;
+const button200 = document.getElementById('small-200') as HTMLElement;
+const button201 = document.getElementById('small-201') as HTMLElement;
+const button202 = document.getElementById('small-202') as HTMLElement;
+const button210 = document.getElementById('small-210') as HTMLElement;
+const button211 = document.getElementById('small-211') as HTMLElement;
+const button212 = document.getElementById('small-212') as HTMLElement;
+const button220 = document.getElementById('small-220') as HTMLElement;
+const button221 = document.getElementById('small-221') as HTMLElement;
+const button222 = document.getElementById('small-222') as HTMLElement;
+const button300 = document.getElementById('small-300') as HTMLElement;
+const button301 = document.getElementById('small-301') as HTMLElement;
+const button302 = document.getElementById('small-302') as HTMLElement;
+const button310 = document.getElementById('small-310') as HTMLElement;
+const button311 = document.getElementById('small-311') as HTMLElement;
+const button312 = document.getElementById('small-312') as HTMLElement;
+const button320 = document.getElementById('small-320') as HTMLElement;
+const button321 = document.getElementById('small-321') as HTMLElement;
+const button322 = document.getElementById('small-322') as HTMLElement;
+const button400 = document.getElementById('small-400') as HTMLElement;
+const button401 = document.getElementById('small-401') as HTMLElement;
+const button402 = document.getElementById('small-402') as HTMLElement;
+const button410 = document.getElementById('small-410') as HTMLElement;
+const button411 = document.getElementById('small-411') as HTMLElement;
+const button412 = document.getElementById('small-412') as HTMLElement;
+const button420 = document.getElementById('small-420') as HTMLElement;
+const button421 = document.getElementById('small-421') as HTMLElement;
+const button422 = document.getElementById('small-422') as HTMLElement;
+const button500 = document.getElementById('small-500') as HTMLElement;
+const button501 = document.getElementById('small-501') as HTMLElement;
+const button502 = document.getElementById('small-502') as HTMLElement;
+const button510 = document.getElementById('small-510') as HTMLElement;
+const button511 = document.getElementById('small-511') as HTMLElement;
+const button512 = document.getElementById('small-512') as HTMLElement;
+const button520 = document.getElementById('small-520') as HTMLElement;
+const button521 = document.getElementById('small-521') as HTMLElement;
+const button522 = document.getElementById('small-522') as HTMLElement;
+const button600 = document.getElementById('small-600') as HTMLElement;
+const button601 = document.getElementById('small-601') as HTMLElement;
+const button602 = document.getElementById('small-602') as HTMLElement;
+const button610 = document.getElementById('small-610') as HTMLElement;
+const button611 = document.getElementById('small-611') as HTMLElement;
+const button612 = document.getElementById('small-612') as HTMLElement;
+const button620 = document.getElementById('small-620') as HTMLElement;
+const button621 = document.getElementById('small-621') as HTMLElement;
+const button622 = document.getElementById('small-622') as HTMLElement;
+const button700 = document.getElementById('small-700') as HTMLElement;
+const button701 = document.getElementById('small-701') as HTMLElement;
+const button702 = document.getElementById('small-702') as HTMLElement;
+const button710 = document.getElementById('small-710') as HTMLElement;
+const button711 = document.getElementById('small-711') as HTMLElement;
+const button712 = document.getElementById('small-712') as HTMLElement;
+const button720 = document.getElementById('small-720') as HTMLElement;
+const button721 = document.getElementById('small-721') as HTMLElement;
+const button722 = document.getElementById('small-722') as HTMLElement;
+const button800 = document.getElementById('small-800') as HTMLElement;
+const button801 = document.getElementById('small-801') as HTMLElement;
+const button802 = document.getElementById('small-802') as HTMLElement;
+const button810 = document.getElementById('small-810') as HTMLElement;
+const button811 = document.getElementById('small-811') as HTMLElement;
+const button812 = document.getElementById('small-812') as HTMLElement;
+const button820 = document.getElementById('small-820') as HTMLElement;
+const button821 = document.getElementById('small-821') as HTMLElement;
+const button822 = document.getElementById('small-822') as HTMLElement;
+
+function printBoard() {
+    button000.textContent = grid[0].grid[0][0];
+    button001.textContent = grid[0].grid[0][1];
+    button002.textContent = grid[0].grid[0][2];
+    button010.textContent = grid[0].grid[1][0];
+    button011.textContent = grid[0].grid[1][1];
+    button012.textContent = grid[0].grid[1][2];
+    button020.textContent = grid[0].grid[2][0];
+    button021.textContent = grid[0].grid[2][1];
+    button022.textContent = grid[0].grid[2][2];
+    button100.textContent = grid[1].grid[0][0];
+    button101.textContent = grid[1].grid[0][1];
+    button102.textContent = grid[1].grid[0][2];
+    button110.textContent = grid[1].grid[1][0];
+    button111.textContent = grid[1].grid[1][1];
+    button112.textContent = grid[1].grid[1][2];
+    button120.textContent = grid[1].grid[2][0];
+    button121.textContent = grid[1].grid[2][1];
+    button122.textContent = grid[1].grid[2][2];
+    button200.textContent = grid[2].grid[0][0];
+    button201.textContent = grid[2].grid[0][1];
+    button202.textContent = grid[2].grid[0][2];
+    button210.textContent = grid[2].grid[1][0];
+    button211.textContent = grid[2].grid[1][1];
+    button212.textContent = grid[2].grid[1][2];
+    button220.textContent = grid[2].grid[2][0];
+    button221.textContent = grid[2].grid[2][1];
+    button222.textContent = grid[2].grid[2][2];
+    button300.textContent = grid[3].grid[0][0];
+    button301.textContent = grid[3].grid[0][1];
+    button302.textContent = grid[3].grid[0][2];
+    button310.textContent = grid[3].grid[1][0];
+    button311.textContent = grid[3].grid[1][1];
+    button312.textContent = grid[3].grid[1][2];
+    button320.textContent = grid[3].grid[2][0];
+    button321.textContent = grid[3].grid[2][1];
+    button322.textContent = grid[3].grid[2][2];
+    button400.textContent = grid[4].grid[0][0];
+    button401.textContent = grid[4].grid[0][1];
+    button402.textContent = grid[4].grid[0][2];
+    button410.textContent = grid[4].grid[1][0];
+    button411.textContent = grid[4].grid[1][1];
+    button412.textContent = grid[4].grid[1][2];
+    button420.textContent = grid[4].grid[2][0];
+    button421.textContent = grid[4].grid[2][1];
+    button422.textContent = grid[4].grid[2][2];
+    button500.textContent = grid[5].grid[0][0];
+    button501.textContent = grid[5].grid[0][1];
+    button502.textContent = grid[5].grid[0][2];
+    button510.textContent = grid[5].grid[1][0];
+    button511.textContent = grid[5].grid[1][1];
+    button512.textContent = grid[5].grid[1][2];
+    button520.textContent = grid[5].grid[2][0];
+    button521.textContent = grid[5].grid[2][1];
+    button522.textContent = grid[5].grid[2][2];
+    button600.textContent = grid[6].grid[0][0];
+    button601.textContent = grid[6].grid[0][1];
+    button602.textContent = grid[6].grid[0][2];
+    button610.textContent = grid[6].grid[1][0];
+    button611.textContent = grid[6].grid[1][1];
+    button612.textContent = grid[6].grid[1][2];
+    button620.textContent = grid[6].grid[2][0];
+    button621.textContent = grid[6].grid[2][1];
+    button622.textContent = grid[6].grid[2][2];
+    button700.textContent = grid[7].grid[0][0];
+    button701.textContent = grid[7].grid[0][1];
+    button702.textContent = grid[7].grid[0][2];
+    button710.textContent = grid[7].grid[1][0];
+    button711.textContent = grid[7].grid[1][1];
+    button712.textContent = grid[7].grid[1][2];
+    button720.textContent = grid[7].grid[2][0];
+    button721.textContent = grid[7].grid[2][1];
+    button722.textContent = grid[7].grid[2][2];
+    button800.textContent = grid[8].grid[0][0];
+    button801.textContent = grid[8].grid[0][1];
+    button802.textContent = grid[8].grid[0][2];
+    button810.textContent = grid[8].grid[1][0];
+    button811.textContent = grid[8].grid[1][1];
+    button812.textContent = grid[8].grid[1][2];
+    button820.textContent = grid[8].grid[2][0];
+    button821.textContent = grid[8].grid[2][1];
+    button822.textContent = grid[8].grid[2][2];
+}
+
+function highlightValidGrids(validGrids: number[]) {
+    for (let i = 0; i < 9; i++) {
+        if (validGrids.includes(i)) {
+            (document.getElementById(`big-${i}`) as HTMLElement).style.backgroundColor = 'rgba(0, 255, 0, 0.5)';
+        } else {
+            (document.getElementById(`big-${i}`) as HTMLElement).style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        }
+    }
+}
+
+function colorWinner(cells: number[]) {
+    for (let i = 0; i < 9; i++) {
+        if (cells.includes(i)) {
+            (document.getElementById(`big-${i}`) as HTMLElement).style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
+        } else {
+            (document.getElementById(`big-${i}`) as HTMLElement).style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        }
+    }
+}

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Tac Toe - 2 Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" class="align-items-center justify-content-center vh-100 font-monospace">
+    <div class="d-flex align-items-center justify-content-center vh-100" style="margin-top: -1em;">
+        <h4 id="p1" class="ms-5 me-5" style="color: #000000; opacity: 1;">X's turn</h4>
+        <div class="container mx-auto custom-container p-2 text-center big-box">
+            <div class="row row-box">
+                <!-- Big Grid Row 1 -->
+
+                <div id="big-0" class="col border-bottom border-end border-dark col-box">
+
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-000" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-001" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-002" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-010" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-011" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-012" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-020" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-021" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-022" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="big-1" class="col border-bottom border-start border-end border-dark col-box">
+
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-100" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-101" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-102" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-110" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-111" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-112" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-120" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-121" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-122" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="big-2" class="col border-bottom border-start border-dark col-box">
+
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-200" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-201" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-202" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-210" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-211" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-212" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-220" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-221" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-222" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="row row-box">
+                <!-- Big Grid Row 2 -->
+
+                <div id="big-3" class="col border-top border-end border-bottom border-dark col-box">
+
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-300" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-301" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-302" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-310" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-311" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-312" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-320" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-321" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-322" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="big-4" class="col border border-dark col-box">
+
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-400" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-401" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-402" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-410" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-411" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-412" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-420" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-421" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-422" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="big-5" class="col border-top border-start border-bottom border-dark col-box">
+
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-500" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-501" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-502" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-510" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-511" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-512" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-520" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-521" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-522" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="row row-box">
+                <!-- Big Grid Row 3 -->
+
+                <div id="big-6" class="col border-top border-end border-dark col-box">
+                    
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-600" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-601" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-602" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-610" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-611" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-612" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-620" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-621" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-622" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="big-7" class="col border-top border-start border-end border-dark col-box">
+
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-700" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-701" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-702" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-710" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-711" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-712" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-720" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-721" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-722" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="big-8" class="col border-top border-start border-dark col-box">
+                    
+                    <div class="container mx-auto custom-container p-4 text-center small-box">
+                        <div class="row row-box">
+                            <div class="col border-bottom border-end border-dark col-box">
+                                <button id="small-800" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-end border-dark col-box">
+                                <button id="small-801" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-bottom border-dark col-box">
+                                <button id="small-802" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-bottom border-end border-dark col-box">
+                                <button id="small-810" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-end border-dark col-box">
+                                <button id="small-811" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-top border-start border-bottom border-dark col-box">
+                                <button id="small-812" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                        <div class="row row-box">
+                            <div class="col border-top border-end border-dark col-box">
+                                <button id="small-820" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-end border-dark col-box">
+                                <button id="small-821" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                            <div class="col border-start border-top border-dark col-box">
+                                <button id="small-822" class="d-flex align-items-center justify-content-center btn" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <h4 id="p2" class="me-5" style="color: #000000; opacity: 0;">O's turn</h4>
+    </div>
+
+    <div class="d-flex justify-content-center text-center pb-3" style="margin-top: -2em;">
+        <a href="pvp.html" id="reset" class="btn btn-success mx-2">Reset</a>
+        <a href="index.html" class="btn btn-success mx-2">Back</a>
+    </div>
+
+    <script src="/dest/listener.js"></script>
+    <script src="/dest/pvp.js"></script>
+    <script src="/dest/printBoard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

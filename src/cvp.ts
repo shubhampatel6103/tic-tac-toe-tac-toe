@@ -27,16 +27,19 @@ function switchPlayer() {
 	const body = document.getElementById('body') as HTMLElement;
 	const p1 = document.getElementById('p1') as HTMLElement;
 	const p2 = document.getElementById('p2') as HTMLElement;
+	const p2_think = document.getElementById('p2-think') as HTMLElement;
 
 	if (currentPlayer == 1) {
 		currentPlayer = 2;
 		p2.style.animation = 'text-appear 0.5s forwards';
+		p2_think.style.animation = 'text-appear 0.5s forwards';
 		p1.style.animation = 'text-disappear 0.5s forwards';
 		body.style.animation = 'color2 0.7s forwards';
 	} else if (currentPlayer == 2) {
 		currentPlayer = 1;
 		p1.style.animation = 'text-appear 0.5s forwards';
 		p2.style.animation = 'text-disappear 0.5s forwards';
+		p2_think.style.animation = 'text-disappear 0.5s forwards';
 		body.style.animation = 'color1 0.7s forwards';
 	}
 }

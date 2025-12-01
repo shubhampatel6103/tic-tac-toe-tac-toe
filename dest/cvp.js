@@ -29,9 +29,11 @@ var CVP;
         const body = document.getElementById('body');
         const p1 = document.getElementById('p1');
         const p2 = document.getElementById('p2');
+        const p2_think = document.getElementById('p2-think');
         if (currentPlayer == 1) {
             currentPlayer = 2;
             p2.style.animation = 'text-appear 0.5s forwards';
+            p2_think.style.animation = 'text-appear 0.5s forwards';
             p1.style.animation = 'text-disappear 0.5s forwards';
             body.style.animation = 'color2 0.7s forwards';
         }
@@ -39,6 +41,7 @@ var CVP;
             currentPlayer = 1;
             p1.style.animation = 'text-appear 0.5s forwards';
             p2.style.animation = 'text-disappear 0.5s forwards';
+            p2_think.style.animation = 'text-disappear 0.5s forwards';
             body.style.animation = 'color1 0.7s forwards';
         }
     }

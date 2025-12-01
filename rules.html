@@ -1,18 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe Tac Toe - Rules</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body id="body" class="d-flex vh-100 font-monospace" style="background-color: lightgray;">
-    <div class="m-3 text-center">
-        <h2>Rules</h2>
-        <p>In progress</p>
-        <a href="index.html"><button type="button" class="mb-5 btn btn-secondary">Back</button></a>
-    </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body" class="font-monospace" style="background-color: #f4f6f8">
+    <header class="py-4 mb-3 border-bottom bg-white">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h2 class="m-0">Tic Tac Toe Tac Toe — Rules</h2>
+        <a href="index.html" class="btn btn-outline-secondary">Back</a>
+      </div>
+    </header>
+
+    <main class="container pb-5">
+      <section class="mb-4">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h4 class="card-title">Overview</h4>
+            <p class="text-secondary">
+              The board is a 3×3 grid of 3×3 tic‑tac‑toe boards (9 small grids
+              total). Win small grids to claim big squares; align three claimed
+              big squares in a row to win the game.
+            </p>
+            <ul class="list-unstyled small">
+              <li>
+                • Big-board win: three big squares in a line claimed by the same
+                player.
+              </li>
+              <li>
+                • If no line wins and all big squares are decided, the side with
+                more claimed big squares wins; equal → draw.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Big Board Structure</h5>
+            <div class="d-flex justify-content-center">
+              <svg viewBox="0 0 300 300" width="100%" style="max-width: 320px">
+                <defs>
+                  <style>
+                    .bb {
+                      stroke: #222;
+                      stroke-width: 4;
+                      fill: #fff;
+                    }
+                    .sb {
+                      stroke: #999;
+                      stroke-width: 1;
+                      fill: #fafafa;
+                    }
+                    .lab {
+                      font-family: monospace;
+                      font-size: 12px;
+                      fill: #666;
+                    }
+                    .xmark {
+                      stroke: #2b67f6;
+                      stroke-width: 5;
+                    }
+                    .omark {
+                      stroke: #e5533d;
+                      stroke-width: 5;
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <line x1="100" y1="0" x2="100" y2="300" class="bb" />
+                <line x1="200" y1="0" x2="200" y2="300" class="bb" />
+                <line x1="0" y1="100" x2="300" y2="100" class="bb" />
+                <line x1="0" y1="200" x2="300" y2="200" class="bb" />
+                <g transform="translate(0,0)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                  <line x1="16" y1="16" x2="30" y2="30" class="xmark" />
+                  <line x1="16" y1="30" x2="30" y2="16" class="xmark" />
+                  <circle cx="74" cy="74" r="8" class="omark" />
+                </g>
+                <g transform="translate(0,100)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+                <g transform="translate(0,200)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+                <g transform="translate(100,0)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+                <g transform="translate(100,100)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+                <g transform="translate(100,200)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+                <g transform="translate(200,0)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+                <g transform="translate(200,100)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+                <g transform="translate(200,200)">
+                  
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                </g>
+              </svg>
+            </div>
+            <p class="small text-secondary mt-2 mb-0">
+              Each big square contains a small 3×3 tic-tac-toe board.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h4 class="card-title">How Turns Work</h4>
+            <ol class="small mb-3">
+              <li>
+                You play an <strong>X</strong> in one of the allowed
+                <em>small-grid cells</em> inside a valid big square.
+              </li>
+              <li>
+                Your cell’s <strong>row/col</strong> sends the opponent to the
+                <strong>big square</strong> at that same (row, col).
+              </li>
+              <li>
+                If that target big square is already decided (won/draw), the
+                opponent may play in <em>any</em> in-progress big square.
+              </li>
+              <li>
+                Win a small grid by making three-in-a-row inside it; it becomes
+                claimed by X/O and no longer playable.
+              </li>
+            </ol>
+            <div class="d-flex justify-content-center">
+              <svg viewBox="0 0 300 300" width="100%" style="max-width: 320px">
+                <defs>
+                  <style>
+                    .bb {
+                      stroke: #222;
+                      stroke-width: 4;
+                      fill: #fff;
+                    }
+                    .sb {
+                      stroke: #999;
+                      stroke-width: 1;
+                      fill: #fafafa;
+                    }
+                    .lab {
+                      font-family: monospace;
+                      font-size: 12px;
+                      fill: #666;
+                    }
+                    .omark {
+                      stroke: #e5533d;
+                      stroke-width: 5;
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <rect x="0" y="0" width="300" height="300" class="bb" />
+                <line x1="100" y1="0" x2="100" y2="300" class="bb" />
+                <line x1="200" y1="0" x2="200" y2="300" class="bb" />
+                <line x1="0" y1="100" x2="300" y2="100" class="bb" />
+                <line x1="0" y1="200" x2="300" y2="200" class="bb" />
+                <g transform="translate(0,0)">
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                  <circle cx="74" cy="74" r="8" class="omark" />
+                </g>
+                <text x="15" y="95" class="lab">(0,0)</text>
+                <text x="115" y="95" class="lab">(0,1)</text>
+                <text x="215" y="95" class="lab">(0,2)</text>
+                <text x="15" y="195" class="lab">(1,0)</text>
+                <text x="115" y="195" class="lab">(1,1)</text>
+                <text x="215" y="195" class="lab">(1,2)</text>
+                <text x="15" y="295" class="lab">(2,0)</text>
+                <text x="115" y="295" class="lab">(2,1)</text>
+                <text x="215" y="295" class="lab">(2,2)</text>
+              </svg>
+              <!-- Arrow between boards -->
+              <svg
+                viewBox="10 -50 120 120"
+                width="120"
+                height="120"
+                class="mx-3"
+                style="max-width: 100px"
+              >
+                <defs>
+                  <marker
+                    id="turnArrowHead"
+                    markerWidth="8"
+                    markerHeight="8"
+                    refX="4"
+                    refY="4"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M0,0 L8,4 L0,8 L3.2,4 Z" fill="#444" />
+                  </marker>
+                </defs>
+                <path
+                  d="M15,60 C45,60 75,60 105,60"
+                  stroke="#444"
+                  stroke-width="6"
+                  fill="none"
+                  marker-end="url(#turnArrowHead)"
+                />
+                <text
+                  x="15"
+                  y="40"
+                  font-size="12"
+                  fill="#555"
+                  font-family="monospace"
+                >
+                </text>
+              </svg>
+              <svg viewBox="0 0 300 300" width="100%" style="max-width: 320px">
+                <defs>
+                  <style>
+                    .bb {
+                      stroke: #222;
+                      stroke-width: 4;
+                      fill: #fff;
+                    }
+                    .sb {
+                      stroke: #999;
+                      stroke-width: 1;
+                      fill: #fafafa;
+                    }
+                    .lab {
+                      font-family: monospace;
+                      font-size: 12px;
+                      fill: #666;
+                    }
+                    .xmark {
+                      stroke: #2b67f6;
+                      stroke-width: 5;
+                    }
+                    .omark {
+                      stroke: #e5533d;
+                      stroke-width: 5;
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <rect x="0" y="0" width="300" height="300" class="bb" />
+                <line x1="100" y1="0" x2="100" y2="300" class="bb" />
+                <line x1="200" y1="0" x2="200" y2="300" class="bb" />
+                <line x1="0" y1="100" x2="300" y2="100" class="bb" />
+                <line x1="0" y1="200" x2="300" y2="200" class="bb" />
+                <g transform="translate(0,0)">
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                  <circle cx="74" cy="74" r="8" class="omark" />
+                </g>
+                <g transform="translate(200,200)">
+                  <line x1="10" y1="36" x2="90" y2="36" class="sb" />
+                  <line x1="10" y1="62" x2="90" y2="62" class="sb" />
+                  <line x1="36" y1="10" x2="36" y2="90" class="sb" />
+                  <line x1="62" y1="10" x2="62" y2="90" class="sb" />
+                  <line x1="16" y1="16" x2="30" y2="30" class="xmark" />
+                  <line x1="16" y1="30" x2="30" y2="16" class="xmark" />
+                </g>
+                <text x="15" y="95" class="lab">(0,0)</text>
+                <text x="115" y="95" class="lab">(0,1)</text>
+                <text x="215" y="95" class="lab">(0,2)</text>
+                <text x="15" y="195" class="lab">(1,0)</text>
+                <text x="115" y="195" class="lab">(1,1)</text>
+                <text x="215" y="195" class="lab">(1,2)</text>
+                <text x="15" y="295" class="lab">(2,0)</text>
+                <text x="115" y="295" class="lab">(2,1)</text>
+                <text x="215" y="295" class="lab">(2,2)</text>
+              </svg>
+            </div>
+            <div class="small text-secondary mt-2 mb-0">
+              In this example, O played in cell (2,2) of big square (0,0),
+              sending X to big square (2,2) for their next turn.
+          </div>
+        </div>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">How You Win</h4>
+            <ul class="small mb-3">
+              <li>
+                Claim a small grid to mark its big square with
+                <strong>X</strong>/<strong>O</strong>.
+              </li>
+              <li>
+                Form three claimed big squares in a row, column, or diagonal to
+                win.
+              </li>
+              <li>
+                If all big squares are decided and no line win exists: the side
+                with more claimed big squares wins; equal → draw.
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <svg viewBox="0 0 300 300" width="100%" style="max-width: 320px">
+                <defs>
+                  <style>
+                    .bb {
+                      stroke: #222;
+                      stroke-width: 4;
+                      fill: #fff;
+                    }
+                    .winLine {
+                      stroke: #2b67f6;
+                      stroke-width: 8;
+                      stroke-linecap: round;
+                    }
+                    .xFill {
+                      fill: #e3f0ff;
+                      stroke: #2b67f6;
+                      stroke-width: 2;
+                    }
+                    .oFill {
+                      fill: #ffe8e3;
+                      stroke: #e5533d;
+                      stroke-width: 2;
+                    }
+                  </style>
+                </defs>
+                <rect x="0" y="0" width="300" height="300" class="bb" />
+                <line x1="100" y1="0" x2="100" y2="300" class="bb" />
+                <line x1="200" y1="0" x2="200" y2="300" class="bb" />
+                <line x1="0" y1="100" x2="300" y2="100" class="bb" />
+                <line x1="0" y1="200" x2="300" y2="200" class="bb" />
+                <rect x="0" y="0" width="100" height="100" class="xFill" />
+                <rect x="100" y="0" width="100" height="100" class="xFill" />
+                <rect x="200" y="0" width="100" height="100" class="xFill" />
+                <line x1="10" y1="50" x2="290" y2="50" class="winLine" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">Tips</h4>
+            <ul class="small mb-0">
+              <li>
+                Think two boards ahead: the cell you play determines your
+                opponent’s next big square.
+              </li>
+              <li>
+                Prefer sending the opponent to big squares where you’re strong
+                or they’re constrained.
+              </li>
+              <li>
+                Control the macro center and build two-in-a-row threats across
+                big squares.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
